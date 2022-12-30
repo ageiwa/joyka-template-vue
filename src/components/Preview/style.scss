@@ -1,0 +1,174 @@
+.preview {
+    width: 100%;
+    height: 913px;
+    background-image:  url('@/assets/girl-preview.png'), url('@/assets/background.png');
+    background-size: auto, cover;
+    background-position:  calc(50% + 200px) 0, center center;
+    background-repeat: no-repeat, no-repeat;
+    position: relative;
+
+    &__title {
+        font-weight: 700;
+        font-size: 50px;
+        color: #2783FE;
+        background: linear-gradient(95.89deg, #7BC0FF -9.88%, #2783FE 82.48%);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    &__list-preview {
+        margin-top: 27px;
+        list-style: none;
+    }
+
+    &__clouds {
+        bottom: 0;
+        width: 100%;
+        height: 324px;
+        background-image: url('@/assets/clouds.png');
+        background-size: 100% 324px;
+        background-repeat: repeat;
+        position: absolute;
+    }
+}
+
+.list-preview__item-preview {
+    margin-bottom: 30px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+
+    .item-preview__icon {
+        margin-right: 10px;
+    }
+}
+
+.preview__btns-preview {
+    margin-top: 62px;
+    display: flex;
+    align-items: center;
+
+    .btns-preview__btn-wrap {
+        margin-right: 145px;
+        border-radius: 113px;
+        width: 311px;
+        height: 70px;
+        background-color: #0C6DEE;
+        position: relative;
+    }
+
+    .btns-preview__btn-wrap::before {
+        content: '';
+        left: calc(50% - 243px/2);
+        top: 37px;
+        width: 243px;
+        height: 55px;
+        background: #0C6DEE;
+        opacity: 0.8;
+        filter: blur(17.5px);
+        border-radius: 72px;
+        position: absolute;
+    }
+
+    .btns-preview__btn-play-wrap {
+        display: flex;
+        align-items: center;
+        position: relative;
+    }
+
+    .btns-preview__btn-play-wrap::before {
+        content: '';
+        width: 100%;
+        height: 100%;
+        background: #FFFFFF;
+        filter: blur(12px);
+        border-radius: 82px;
+        position: absolute;
+    }
+}
+
+.btns-preview__send-joyka {
+    margin-top: -3px;
+    border: none;
+    border-radius: 113px;
+    width: 311px;
+    height: 70px;
+    font-weight: 700;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    background: linear-gradient(174.82deg, #7BC0FF 4.38%, #2783FE 96.06%);
+    box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    cursor: pointer;
+
+    .send-joyka__icon-wrap {
+        margin-left: 15px;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background: linear-gradient(174.82deg, #2783FE 4.38%, #7BC0FF 96.06%);
+        box-shadow: inset 0px 0px 1px rgba(255, 255, 255, 0.25);
+        background-color: #0B59C2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.btns-preview__send-joyka:hover {
+    background: linear-gradient(174.82deg, #C1E1FF 4.38%, #4595FF 96.06%);
+    box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.25);
+}
+
+.btns-preview__send-joyka:active {
+    background: #7BC0FF;
+}
+
+.btns-preview__btn-play {
+    border-radius: 50%;
+    padding: 20px;
+    background: linear-gradient(174.82deg, rgba(123, 192, 255, 0.1) 4.38%, rgba(39, 131, 254, 0.1) 96.06%);
+    z-index: 1;
+    position: relative;
+
+    .btn-play-wrap__btn-play-icon {
+        position: relative;
+        // position: absolute;
+    }
+}
+
+.btns-preview__btn-play::before {
+    content: '';
+    border-radius: 50%;
+    left: 10px;
+    top: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    background: linear-gradient(174.82deg, rgba(123, 192, 255, 0.1) 4.38%, rgba(39, 131, 254, 0.1) 96.06%);
+    position: absolute;
+}
+
+.btn-play-wrap__title {
+    margin-left: 20px;
+    font-size: 15px;
+    z-index: 1;
+
+    & p {
+        margin-bottom: 5px;
+        color: #172C48;
+    }
+
+    & span {
+        color: #516176;
+    }
+}
+
+
+.preview .container {
+    padding-top: 82px;
+}
