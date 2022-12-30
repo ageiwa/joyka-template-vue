@@ -1,5 +1,5 @@
 <script setup>
-
+  import SelectLanguage from '@/components/SelectLanguage/SelectLanguage.vue'
 </script>
 
 <template>
@@ -20,8 +20,7 @@
         </ul>
       </nav>
 
-      <div>
-      </div>
+      <SelectLanguage />
 
     </div>
   </header>
