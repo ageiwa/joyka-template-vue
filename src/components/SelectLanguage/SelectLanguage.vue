@@ -3,6 +3,7 @@
 
     const lang = ref('EN')
     const langIcon = ref('/src/assets/us.png')
+    
     const languages = ref([
         {id: 1, name: 'EN', icon: '/src/assets/us.png'},
         {id: 2, name: 'RU', icon: '/src/assets/russia.png'},
