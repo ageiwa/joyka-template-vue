@@ -6,7 +6,7 @@
     <div class="preview">
         
         <div class="container">
-            <h1 class="preview__title">JoyKa — эмоции в конверте<br>Дари моменты радости<br>вместе с JoyMail!</h1>
+            <h1 class="preview__title">JoyKa — эмоции в конверте Дари моменты радости вместе с JoyMail!</h1>
             
             <ul class="preview__list-preview">
                 <li class="list-preview__item-preview">
