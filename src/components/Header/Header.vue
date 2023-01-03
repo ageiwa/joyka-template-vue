@@ -7,7 +7,9 @@
     <div class="container">
 
       <div class="header__logo">
-        <img src="@/assets/logo.png">
+        <a href="#">
+          <img src="@/assets/logo.png">
+        </a>
       </div>
 
       <nav class="header__navbar">
