@@ -1,5 +1,5 @@
-<script>
-
+<script setup>
+    import SendJoykaBtn from '@/components/SendJoykaBtn/SendJoykaBtn.vue'
 </script>
 
 <template>
@@ -25,14 +25,7 @@
 
             <div class="preview__btns-preview">
 
-                <div class="btns-preview__btn-wrap">
-                    <button class="btns-preview__send-joyka">
-                        Отправить Джойку
-                        <div class="send-joyka__icon-wrap">
-                            <img src="@/assets/preview-btn-submit.png">
-                        </div>
-                    </button>
-                </div>
+                <SendJoykaBtn />
 
                 <div class="btns-preview__btn-play-wrap">
                     <div class="btns-preview__btn-play">

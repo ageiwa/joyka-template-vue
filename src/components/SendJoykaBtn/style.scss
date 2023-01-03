@@ -1,0 +1,62 @@
+.btns-preview__btn-wrap {
+    margin-right: 145px;
+    border-radius: 113px;
+    width: 311px;
+    height: 70px;
+    background-color: #0C6DEE;
+    position: relative;
+}
+
+.btns-preview__btn-wrap::before {
+    content: '';
+    left: calc(50% - 243px/2);
+    top: 37px;
+    width: 243px;
+    height: 55px;
+    background: #0C6DEE;
+    opacity: 0.8;
+    filter: blur(17.5px);
+    border-radius: 72px;
+    position: absolute;
+}
+
+.btns-preview__send-joyka {
+    margin-top: -3px;
+    border: none;
+    border-radius: 113px;
+    width: 311px;
+    height: 70px;
+    font-weight: 700;
+    font-size: 20px;
+    color: #fff;
+    text-align: center;
+    background: linear-gradient(174.82deg, #7BC0FF 4.38%, #2783FE 96.06%);
+    box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    cursor: pointer;
+
+    .send-joyka__icon-wrap {
+        margin-left: 15px;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        background: linear-gradient(174.82deg, #2783FE 4.38%, #7BC0FF 96.06%);
+        box-shadow: inset 0px 0px 1px rgba(255, 255, 255, 0.25);
+        background-color: #0B59C2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.btns-preview__send-joyka:hover {
+    background: linear-gradient(174.82deg, #C1E1FF 4.38%, #4595FF 96.06%);
+    box-shadow: inset 0px 0px 5px rgba(255, 255, 255, 0.25);
+}
+
+.btns-preview__send-joyka:active {
+    background: #7BC0FF;
+}
