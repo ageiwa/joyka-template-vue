@@ -1,12 +1,10 @@
 <template>
-    <div class="btns-preview__btn-wrap">
-        <button class="btns-preview__send-joyka">
-            Отправить Джойку
-            <div class="send-joyka__icon-wrap">
-                <img src="@/assets/preview-btn-submit.png">
-            </div>
-        </button>
-    </div>
+    <button class="send-joyka-btn">
+        Отправить Джойку
+        <span class="send-joyka-btn__icon-wrap">
+            <img class="send-joyka-btn__icon" src="@/assets/preview-btn-submit.png">
+        </span>
+    </button>
 </template>
 
 <style scoped lang="scss">
