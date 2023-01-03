@@ -50,3 +50,17 @@
         margin-right: 10px;
     }
 }
+
+.btn-play {
+    width: 74px;
+    height: 74px;
+    cursor: pointer;
+}
+
+.btn-play:hover path {
+    fill: url(#hover-gradient);
+}
+
+.btn-play:active path {
+    fill: #7BC0FF;
+}
