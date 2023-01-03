@@ -27,7 +27,7 @@
 
                 <SendJoykaBtn />
 
-                <div class="btns-preview__btn-play-wrap">
+                <!-- <div class="btns-preview__btn-play-wrap">
                     <div class="btns-preview__btn-play">
                         <img class="btn-play-wrap__btn-play-icon" src="@/assets/preview-btn-play.png">
                     </div>
@@ -35,7 +35,7 @@
                         <p>Посмотрите видеообзор<br>нашего подарка</p>
                         <span>Время просмотра 1:23 сек</span>
                     </div>
-                </div>
+                </div> -->
 
             </div>
 
