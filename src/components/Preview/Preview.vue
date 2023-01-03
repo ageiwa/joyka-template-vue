@@ -27,18 +27,7 @@
 
                 <SendJoykaBtn />
 
-                <!-- <div class="btns-preview__btn-play-wrap">
-                    <div class="btns-preview__btn-play">
-                        <img class="btn-play-wrap__btn-play-icon" src="@/assets/preview-btn-play.png">
-                    </div>
-                    <div class="btn-play-wrap__title">
-                        <p>Посмотрите видеообзор<br>нашего подарка</p>
-                        <span>Время просмотра 1:23 сек</span>
-                    </div>
-                </div> -->
-
                 <div class="btn-play-container">
-
                     <div class="btn-play">
                         <svg width="74" height="73" viewBox="0 0 74 73" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_i_23_187)">
