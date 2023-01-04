@@ -1,5 +1,5 @@
 <script setup>
-    import SendJoykaBtn from '@/components/SendJoykaBtn/SendJoykaBtn.vue';
+    import SendJoykaBtn from '@/components/SendJoykaBtn/SendJoykaBtn.vue'
 </script>
 
 <template>
@@ -8,62 +8,69 @@
 
             <h1 class="how-it-works__header-title">Как это работает?</h1>
 
-            <ul class="how-it-works__list-steps">
+            <ul class="how-it-works__step-list">
 
-                <div class="list-steps__container">
-
-                    <li class="list-steps__item-steps">
-                        <div class="item-steps__wrap-img">
-                            <img class="item-steps__img" src="@/assets/girl-selfie.png">
-                        </div>
-                        <div class="item-steps__text">
-                            <img class="item-steps__step-number" src="@/assets/1.png">
-                            <h2 class="item-steps__title">Человек<br>делает селфи</h2>
-                            <p class="item-steps__subtitle">Вы делаете селфи<br>или выбираете удачное фото<br>из галереи JoyKa</p>
-                        </div>
-                    </li>
-                    
-                    <li class="list-steps__item-steps">
-                        <div class="item-steps__wrap-img">
-                            <img class="item-steps__img" src="@/assets/girl-phone.png">
-                        </div>
-                        <div class="item-steps__text">
-                            <img class="item-steps__step-number" src="@/assets/2.png">
-                            <h2 class="item-steps__title">Конверт<br>JoyKa с ярким фото</h2>
-                            <p class="item-steps__subtitle">Оставляете заявку на сайте<br>или в приложении. Две минуты<br> — и JoyKa готова!</p>
-                        </div>
-                    </li>
-
-                    <li class="list-steps__item-steps">
-                        <div class="item-steps__wrap-img">
-                            <img class="item-steps__img" src="@/assets/man-chocolate.png">
-                        </div>
-                        <div class="item-steps__text">
-                            <img class="item-steps__step-number" src="@/assets/3.png">
-                            <h2 class="item-steps__title">Курьер несёт<br>JoyKa</h2>
-                            <p class="item-steps__subtitle">Распечатанную фотографию<br>в красивом конверте курьер<br>доставит лично в руки адресату</p>
-                        </div>
-                    </li>
-
-                </div>
-
-                <li class="list-steps__item-steps address-step">
-                    <div class="item-steps__rect-steps">
-                        <img class="rect-steps__img" src="@/assets/love-voxel.png">
-                        <img class="rect-steps__img" src="@/assets/girl-address.png">
+                <li class="step-list__item-step">
+                    <div class="item-step__wrap-img">
+                        <img class="item-step__img" src="@/assets/girl-selfie.png">
                     </div>
+                    <div class="item-step__dots-wrap">
+                        <div class="item-step__dots"></div>
+                        <div class="item-step__dots"></div>
+                        <div class="item-step__dots"></div>
+                    </div>
+                    <div class="item-step__text">
+                        <h2 class="item-step__title">Человек делает селфи</h2>
+                        <p class="item-step__subtitle">Вы делаете селфи или выбираете удачное фото из галереи JoyKa</p>
+                    </div>
+                    <p class="item-step__step">1</p>
+                </li>
 
-                    <div class="item-steps__text">
-                        <div class="address-step-text">
-                            <img class="item-steps__step-number" src="@/assets/4.png">
-                            <h2 class="item-steps__title">Адресат радуется полученной JoyKa</h2>
-                            <p class="item-steps__subtitle">Ваше фото с личным посланием подарят<br>близким хорошее настроение на весь день</p>
-                        </div>
+                <li class="step-list__item-step">
+                    <div class="item-step__wrap-img">
+                        <img class="item-step__img" src="@/assets/girl-phone.png">
+                    </div>
+                    <div class="item-step__dots-wrap">
+                        <div class="item-step__dots"></div>
+                        <div class="item-step__dots"></div>
+                        <div class="item-step__dots"></div>
+                    </div>
+                    <div class="item-step__text">
+                        <h2 class="item-step__title">Конверт JoyKa с ярким фото</h2>
+                        <p class="item-step__subtitle">Оставляете заявку на сайте или в приложении. Две минуты — и JoyKa готова!</p>
+                    </div>
+                    <p class="item-step__step">2</p>
+                </li>
 
+                <li class="step-list__item-step">
+                    <div class="item-step__wrap-img">
+                        <img class="item-step__img" src="@/assets/man-chocolate.png">
+                    </div>
+                    <div class="item-step__dots-wrap last-dots">
+                        <div class="item-step__dots"></div>
+                        <div class="item-step__dots"></div>
+                        <div class="item-step__dots"></div>
+                    </div>
+                    <div class="item-step__text">
+                        <h2 class="item-step__title">Курьер несёт JoyKa</h2>
+                        <p class="item-step__subtitle">Распечатанную фотографию в красивом конверте курьер доставит лично в руки адресату</p>
+                    </div>
+                    <p class="item-step__step">3</p>
+                </li>
+
+                <li class="step-list__item-step step-address">
+                    <div class="item-step__wrap-img">
+                        <img class="item-step__img" src="@/assets/love-voxel.png">
+                        <img class="item-step__img" src="@/assets/girl-address.png">
+                    </div>
+                    <div class="item-step__text">
+                        <h2 class="item-step__title">Адресат радуется полученной JoyKa</h2>
+                        <p class="item-step__subtitle">Ваше фото с личным посланием подарят близким хорошее настроение на весь день</p>
                         <SendJoykaBtn />
                     </div>
-
+                    <p class="item-step__step">4</p>
                 </li>
+
             </ul>
 
         </div>
