@@ -1,0 +1,24 @@
+.reason-for-send {
+    padding-top: 240px;
+    height: 1504px;
+    background-color: #ffe4c4;
+    background: linear-gradient(90deg, #f8e2d8 40%, #ca9f87 100%);
+    position: relative;
+
+    &__header-title {
+        font-weight: 700;
+        font-size: 50px;
+        color: #172C48;
+        text-align: center;
+    }
+
+    &__clouds {
+        top: -50px;
+        width: 100%;
+        height: 324px;
+        background-image: url('@/assets/clouds.png');
+        background-size: 100% 324px;
+        transform: rotate(180deg);
+        position: absolute;
+    }
+}
