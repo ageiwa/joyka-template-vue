@@ -2,7 +2,9 @@
     padding-top: 240px;
     height: 1504px;
     background-color: #ffe4c4;
-    background: linear-gradient(90deg, #f8e2d8 40%, #ca9f87 100%);
+    background-image: url('@/assets/camera.png'), url('@/assets/mail.png'), linear-gradient(90deg, #f8e2d8 40%, #ca9f87 100%);
+    background-repeat: no-repeat;
+    background-position: -80px 310px, calc(100% + 70px) 563px, 0 0;
     position: relative;
 
     &__header-title {
@@ -21,9 +23,16 @@
         transform: rotate(180deg);
         position: absolute;
     }
+
+    .container {
+        background-image: url('@/assets/DSLR Camera with Zoom on Tripod.G12 2.png'), url('@/assets/heart-with-wings.png'), url('@/assets/Mask Group.png');
+        background-position: 100px 170px, 346px 340px, 100% 0;
+        background-repeat: no-repeat;
+    }
 }
 
 .swiper {
+    margin-top: 379px;
     overflow: visible;
 
     .swiper-button-prev, .swiper-button-next {
