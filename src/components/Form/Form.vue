@@ -8,6 +8,19 @@
         {id: 'country3', name: 'Тайланд', img: '/src/assets/country3.png'},
         {id: 'other-country', name: 'Еще страна', img: '/src/assets/empty-country.png'}
     ])
+
+    const currentStep = ref(1)
+    const totalStep = ref(4)
+    const progress = ref(0)
+
+    function prevStep() {
+        if (currentStep.value > 1) currentStep.value--
+    }
+
+    function nextStep() {
+        if (currentStep.value < totalStep.value) currentStep.value++
+    }
+
 </script>
 
 <template>
@@ -21,7 +34,7 @@
                 <div class="form__choice">
 
                     <div class="choice__progress">
-                        <p class="progress__step">Шаг 1 из 5</p>
+                        <p class="progress__step">Шаг {{ currentStep }} из {{ totalStep }}</p>
                         <div class="progress__progress-wrap">
                             <div class="progress__progress-line"></div>
                         </div>
@@ -46,8 +59,8 @@
                     </div>
 
                     <div class="choice__btns-wrap">
-                        <SendJoykaBtn :title="'Предыдущий шаг'" />
-                        <SendJoykaBtn :title="'Следующий шаг'" />
+                        <SendJoykaBtn :title="'Предыдущий шаг'" @click="prevStep" />
+                        <SendJoykaBtn :title="'Следующий шаг'" @click="nextStep" />
                     </div>
                 </div>
             </form>
