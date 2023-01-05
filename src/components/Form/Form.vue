@@ -11,14 +11,20 @@
 
     const currentStep = ref(1)
     const totalStep = ref(4)
-    const progress = ref(0)
+    const progressLine = ref(calcProgress())
 
     function prevStep() {
         if (currentStep.value > 1) currentStep.value--
+        progressLine.value = calcProgress()
     }
 
     function nextStep() {
         if (currentStep.value < totalStep.value) currentStep.value++
+        progressLine.value = calcProgress()
+    }
+
+    function calcProgress() {
+        return (currentStep.value / totalStep.value) * 100
     }
 
 </script>
@@ -36,7 +42,7 @@
                     <div class="choice__progress">
                         <p class="progress__step">Шаг {{ currentStep }} из {{ totalStep }}</p>
                         <div class="progress__progress-wrap">
-                            <div class="progress__progress-line"></div>
+                            <div :style="{width: progressLine + '%'}" class="progress__progress-line"></div>
                         </div>
                     </div>
 
