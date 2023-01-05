@@ -2,12 +2,51 @@
     import { ref } from 'vue'
     import SendJoykaBtn from '@/components/SendJoykaBtn/SendJoykaBtn.vue'
 
-    const countries = ref([
-        {id: 'country1', name: 'Украина', img: '/src/assets/country1.png'},
-        {id: 'country2', name: 'Грузия', img: '/src/assets/country2.png'},
-        {id: 'country3', name: 'Тайланд', img: '/src/assets/country3.png'},
-        {id: 'other-country', name: 'Еще страна', img: '/src/assets/empty-country.png'}
+    const data = ref([
+        {
+            step: 1,
+            title: 'Выберите страну отправления',
+            data: [
+                {id: 'country1', name: 'Украина', img: '/src/assets/country1.png'},
+                {id: 'country2', name: 'Грузия', img: '/src/assets/country2.png'},
+                {id: 'country3', name: 'Тайланд', img: '/src/assets/country3.png'},
+                {id: 'other-country', name: 'Еще страна', img: '/src/assets/other.png'}
+            ]
+        },
+        {
+            step: 2,
+            title: 'Выберите время отправления',
+            data: [
+                {id: 'time1', name: 'Утром', img: '/src/assets/time1.png'},
+                {id: 'time2', name: 'Днем', img: '/src/assets/time2.png'},
+                {id: 'time3', name: 'Вечером', img: '/src/assets/time3.png'},
+                {id: 'other-time', name: 'Другое время', img: '/src/assets/other.png'}
+            ]
+        },
+        {
+            step: 3,
+            title: 'Выберите социальную сеть для доставки',
+            data: [
+                {id: 'soc1', name: 'VK', img: '/src/assets/soc1.png'},
+                {id: 'soc2', name: 'Одноклассники', img: '/src/assets/soc2.png'},
+                {id: 'soc3', name: 'E-Mail', img: '/src/assets/soc3.png'},
+                {id: 'other-soc', name: 'Другой способ', img: '/src/assets/other.png'}
+            ]
+        },
+        {
+            step: 4,
+            title: 'Выберите голос озвучивания Joyka',
+            data: [
+                {id: 'voice1', name: 'Виктор', img: '/src/assets/voice1.png'},
+                {id: 'voice2', name: 'Елена', img: '/src/assets/voice2.png'},
+                {id: 'voice3', name: 'Максим', img: '/src/assets/voice3.png'},
+                {id: 'other-voice', name: 'Выбрать свой', img: '/src/assets/other.png'}
+            ]
+        },
     ])
+
+    const stepTitle = ref('')
+    const stepData = ref([])
 
     const currentStep = ref(1)
     const totalStep = ref(4)
@@ -24,6 +63,11 @@
     }
 
     function calcProgress() {
+        const step = data.value[currentStep.value - 1]
+
+        stepTitle.value = step.title
+        stepData.value = step.data
+
         return (currentStep.value / totalStep.value) * 100
     }
 
@@ -47,18 +91,18 @@
                     </div>
 
                     <div class="choice__select-country">
-                        <h2 class="select-country__title">Выберите страну отправления</h2>
+                        <h2 class="select-country__title">{{ stepTitle }}</h2>
 
                         <div class="select-country__county-wrap">
 
-                            <div v-for="country in countries" class="country-wrap__country">
-                                <label :for="country.id" class="country__label">
+                            <div v-for="data in stepData" class="country-wrap__country">
+                                <label :for="data.id" class="country__label">
                                     <div class="label__img-wrap">
-                                        <img :src="country.img">
+                                        <img :src="data.img">
                                     </div>
-                                    {{ country.name }}
+                                    {{ data.name }}
                                 </label>
-                                <input class="country__input" :id="country.id" type="radio" name="country">
+                                <input class="country__input" :id="data.id" type="radio" name="country">
                             </div>
 
                         </div>
