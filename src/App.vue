@@ -4,6 +4,7 @@
   import HowItWorks from '@/components/HowItWorks/HowItWorks.vue'
   import ReasonForSend from '@/components/ReasonForSend/ReasonForSend.vue'
   import Form from '@/components/Form/Form.vue'
+  import Footer from '@/components/Footer/Footer.vue'
 </script>
 
 <template>
@@ -12,6 +13,7 @@
   <HowItWorks />
   <ReasonForSend />
   <Form />
+  <Footer />
 </template>
 
 <style scoped>
