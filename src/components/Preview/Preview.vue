@@ -25,7 +25,7 @@
 
             <div class="preview__btns-preview">
 
-                <SendJoykaBtn />
+                <SendJoykaBtn :title="'Отправить Джойку'" :showIcon="true" />
 
                 <div class="btn-play-container">
                     <div class="btn-play">

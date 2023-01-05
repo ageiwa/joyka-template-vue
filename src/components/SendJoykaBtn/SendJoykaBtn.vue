@@ -1,7 +1,14 @@
+<script setup>
+    const props = defineProps({
+        title: String,
+        showIcon: Boolean
+    })
+</script>
+
 <template>
-    <button class="send-joyka-btn">
-        Отправить Джойку
-        <span class="send-joyka-btn__icon-wrap">
+    <button class="send-joyka-btn" type="button">
+        {{ title }}
+        <span v-if="showIcon" class="send-joyka-btn__icon-wrap">
             <img class="send-joyka-btn__icon" src="@/assets/preview-btn-submit.png">
         </span>
     </button>

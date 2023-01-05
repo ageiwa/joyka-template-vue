@@ -66,7 +66,7 @@
                     <div class="item-step__text">
                         <h2 class="item-step__title">Адресат радуется полученной JoyKa</h2>
                         <p class="item-step__subtitle">Ваше фото с личным посланием подарят близким хорошее настроение на весь день</p>
-                        <SendJoykaBtn />
+                        <SendJoykaBtn :title="'Отправить Джойку'" :showIcon="true" />
                     </div>
                     <p class="item-step__step">4</p>
                 </li>
