@@ -94,6 +94,5 @@
             </swiper>
 
         </div>
-        <div class="reason-for-send__wave"></div>
     </div>
 </template>
