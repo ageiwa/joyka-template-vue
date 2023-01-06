@@ -4,6 +4,7 @@
     import { Navigation, Pagination } from 'swiper'
     import 'swiper/scss'
     import './style.scss'
+    import './media.scss'
 
     const slides = ref([
         {img: 'src/assets/slider-img1.png', title: 'Удивить родных', subtitle: 'Встретились со знаменитостью? Веселитесь на концерте любимой группы? Отдыхаете на экзотическом пляже? Такие фото обязательно должны быть в семейном альбоме!'},
