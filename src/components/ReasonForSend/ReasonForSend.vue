@@ -35,6 +35,20 @@
             return curElem + ' / ' + totalElem
         }
     }
+
+    const breakpoints = {
+        520: {
+            slidesPerView: 1
+        },
+
+        550: {
+            slidesPerView: 2
+        },
+
+        900: {
+            slidesPerView: 3
+        }
+    }
     
 </script>
 
@@ -45,7 +59,7 @@
         <div class="container">
             <h1 class="reason-for-send__header-title">Поводы для отправки</h1>
 
-            <swiper :slides-per-view="1" :space-between="-700" :modules="[Navigation, Pagination]" :navigation="navigation" :pagination="pagination">
+            <swiper :space-between="30" :breakpoints="breakpoints" :modules="[Navigation, Pagination]" :navigation="navigation" :pagination="pagination">
                 
                 <SwiperSlide v-for="slide in slides">
                     <div class="slider__item-slider">
