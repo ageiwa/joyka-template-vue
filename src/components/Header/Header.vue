@@ -26,6 +26,22 @@
 
       <SelectLanguage />
 
+      <div class="burger-menu">
+        <div class="burger-menu__line"></div>
+        <div class="burger-menu__line"></div>
+        <div class="burger-menu__line"></div>
+
+        <!-- <nav class="header__navbar-mobile">
+          <ul>
+            <li class="navbar-mobile__item"><a href="#">Как это работает?</a></li>
+            <li class="navbar-mobile__item"><a href="#">Кто мы?</a></li>
+            <li class="navbar-mobile__item"><a href="#">Поводы для отправки</a></li>
+            <li class="navbar-mobile__item"><a href="#">FAQ</a></li>
+            <li class="navbar-mobile__item"><a href="#">Отзывы</a></li>
+          </ul>
+        </nav> -->
+      </div>
+
     </div>
   </header>
 </template>
