@@ -13,9 +13,5 @@
   <HowItWorks />
   <ReasonForSend />
   <Form />
-  <!-- <Footer /> -->
+  <Footer />
 </template>
-
-<style scoped>
-
-</style>

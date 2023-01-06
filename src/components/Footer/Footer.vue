@@ -1,5 +1,6 @@
 <script setup>
     import './style.scss'
+    import './media.scss'
 </script>
 
 <template>
