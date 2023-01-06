@@ -84,16 +84,6 @@
         position: absolute;
     }
 
-    // .progress-line-mobile {
-    //     top: 0;
-    //     border-radius: 50%;
-    //     width: 100%;
-    //     height: 100%;
-    //     background-color: #2783FE;
-    //     position: absolute;
-    //     clip-path: polygon(50% 50%, 50% 0, 100% 0, 100% 20%);
-    // }
-
     .progress-mobile__title {
         left: calc(50% - 70px/2);
         top: calc(50% - 70px/2);
@@ -167,6 +157,14 @@
             border: 1px solid #2783FE;
             background: transparent;
             color: #2783FE;
+        }
+
+        .send-joyka-btn::after {
+            display: none;
+        }
+
+        .send-joyka-btn::before {
+            display: none;
         }
     }
 }

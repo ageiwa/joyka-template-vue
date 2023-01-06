@@ -58,14 +58,6 @@
             flex-direction: column-reverse;
         }
 
-        .send-joyka-btn::after {
-            display: none;
-        }
-
-        .send-joyka-btn::before {
-            display: none;
-        }
-
         .send-joyka-btn:first-child {
             margin-top: 20px;
         }
