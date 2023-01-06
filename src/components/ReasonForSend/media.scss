@@ -1,7 +1,42 @@
 @media (max-width: 1219px) {
     .reason-for-send {
+        padding-top: 100px;
+        background: linear-gradient(90deg, #f8e2d8 70%, #ca9f87 100%);
+
         &__clouds {
             top: -160px;
+        }
+
+        .container {
+            background-image: url('@/assets/DSLR Camera with Zoom on Tripod.G12 2.png'), url('@/assets/Mask Group.png');
+            background-position: -30px 180px, 100% 120px;
+            background-size: auto 400px, auto 385px;
+            background-repeat: no-repeat;
+        }
+
+        &__header-title {
+            width: 100%;
+        }
+    }
+
+    .swiper {
+        margin-top: 315px;
+
+        .swiper__control-container {
+            padding: 0 30px 0 30px;
+            justify-content: space-between;
+        }
+
+        .control-panel__text {
+            margin: 0;
+        }
+
+        .control-container__navigation {
+            display: none;
+        }
+
+        .control-panel__touch-icon-wrap {
+            display: block;
         }
     }
     

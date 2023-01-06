@@ -85,6 +85,10 @@
                     <p class="control-panel__text">Листайте дальше</p>
 
                     <div class="swiper-pagination"></div>
+
+                    <div class="control-panel__touch-icon-wrap">
+                        <img src="@/assets/touch-icon.png">
+                    </div>
                 </div>
                 
             </swiper>
