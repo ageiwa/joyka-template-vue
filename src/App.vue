@@ -10,7 +10,7 @@
 <template>
   <Header />
   <Preview />
-  <!-- <HowItWorks /> -->
+  <HowItWorks />
   <!-- <ReasonForSend /> -->
   <!-- <Form /> -->
   <!-- <Footer /> -->

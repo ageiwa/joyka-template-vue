@@ -30,24 +30,24 @@
             display: flex;
         }
     }
-}
 
-.step-address {
-    margin: 0;
-    grid-column: auto;
-
-    .item-step__wrap-img {
-        flex: auto;
-        flex-shrink: 0;
-        width: 320px;
-        height: 280px;
-    }
-
-    .item-step__img {
-        position: absolute;
-    }
-
-    .love-img {
-        display: none;
+    .step-address {
+        margin: 0;
+        grid-column: auto;
+    
+        .item-step__wrap-img {
+            flex: auto;
+            flex-shrink: 0;
+            width: 320px;
+            height: 280px;
+        }
+    
+        .item-step__img {
+            position: absolute;
+        }
+    
+        .love-img {
+            display: none;
+        }
     }
 }
