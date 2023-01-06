@@ -12,7 +12,7 @@
   <Preview />
   <HowItWorks />
   <ReasonForSend />
-  <!-- <Form /> -->
+  <Form />
   <!-- <Footer /> -->
 </template>
 

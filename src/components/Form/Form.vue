@@ -2,6 +2,7 @@
     import { ref } from 'vue'
     import SendJoykaBtn from '@/components/SendJoykaBtn/SendJoykaBtn.vue'
     import './style.scss'
+    import './media.scss'
 
     const data = ref([
         {
@@ -51,6 +52,8 @@
 
     const currentStep = ref(1)
     const totalStep = ref(4)
+
+    const progressLineMobile = ref(0)
     const progressLine = ref(calcProgress())
 
     function prevStep() {
@@ -65,11 +68,17 @@
 
     function calcProgress() {
         const step = data.value[currentStep.value - 1]
+        const progressPrecent = (currentStep.value / totalStep.value) * 100
 
         stepTitle.value = step.title
         stepData.value = step.data
 
-        return (currentStep.value / totalStep.value) * 100
+        const c = Math.PI * (45 * 2)
+        const pct = ((100 - progressPrecent) / 100) * c
+
+        progressLineMobile.value = pct
+
+        return progressPrecent
     }
 
 </script>
@@ -84,28 +93,36 @@
                 </div>
                 <div class="form__choice">
 
-                    <div class="choice__progress">
-                        <p class="progress__step">Шаг {{ currentStep }} из {{ totalStep }}</p>
-                        <div class="progress__progress-wrap">
-                            <div :style="{width: progressLine + '%'}" class="progress__progress-line"></div>
+                    <div class="choice__header">
+                        <div class="choice__progress">
+                            <p class="progress__step">Шаг {{ currentStep }} из {{ totalStep }}</p>
+                            <div class="progress__progress-wrap">
+                                <div :style="{width: progressLine + '%'}" class="progress__progress-line"></div>
+                            </div>
                         </div>
+
+                        <div class="choice__progress-mobile">
+                            <svg class="progress-line-mobile" id="svg" width="90" height="90" viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="45" cy="45" r="45" :style="{strokeDashoffset: progressLineMobile, strokeWidth: 20, strokeDasharray: 283}" transform-origin="center" transform="rotate(-90)" fill="rgba(0,0,0,0)" stroke="#2783FE"></circle>
+                            </svg>
+                            <!-- <div class="progress-line-mobile"></div> -->
+                            <div class="progress-mobile__title">
+                                {{ currentStep }} из {{ totalStep }}
+                            </div>
+                        </div>
+
+                        <h2 class="select-country__title">{{ stepTitle }}</h2>
                     </div>
 
-                    <div class="choice__select-country">
-                        <h2 class="select-country__title">{{ stepTitle }}</h2>
-
-                        <div class="select-country__county-wrap">
-
-                            <div v-for="data in stepData" class="country-wrap__country">
-                                <label :for="data.id" class="country__label">
-                                    <div class="label__img-wrap">
-                                        <img :src="data.img">
-                                    </div>
-                                    {{ data.name }}
-                                </label>
-                                <input class="country__input" :id="data.id" type="radio" name="country">
-                            </div>
-
+                    <div class="select-country__county-wrap">
+                        <div v-for="data in stepData" class="country-wrap__country">
+                            <label :for="data.id" class="country__label">
+                                <div class="label__img-wrap">
+                                    <img :src="data.img">
+                                </div>
+                                {{ data.name }}
+                            </label>
+                            <input class="country__input" :id="data.id" type="radio" name="country">
                         </div>
                     </div>
 

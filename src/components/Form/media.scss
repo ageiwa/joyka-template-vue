@@ -1,0 +1,67 @@
+@media (max-width: 1219px) {
+    .order-form {
+        background-color: #fff;
+        .container {
+            padding: 20px;
+        }
+    }
+
+    .form {
+        .form__img-wrap {
+            display: none;
+        }
+
+        .form__choice {
+            padding: 0;
+        }
+    }
+
+    .form::before {
+        display: none;
+    }
+}
+
+@media (max-width: 750px) {
+    .form__choice {
+        .choice__header {
+            display: flex;
+            justify-content: center;
+        }
+
+        .choice__progress {
+            display: none;
+        }
+
+        .choice__progress-mobile {
+            display: block;
+        }
+
+        .select-country__title {
+            margin: 0;
+            margin-left: 20px;
+            width: 189px;
+            font-size: 22px;
+        }
+
+        .select-country__county-wrap {
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        .choice__btns-wrap {
+            flex-direction: column-reverse;
+        }
+
+        .send-joyka-btn::after {
+            display: none;
+        }
+
+        .send-joyka-btn::before {
+            display: none;
+        }
+
+        .send-joyka-btn:first-child {
+            margin-top: 20px;
+        }
+    }
+}
