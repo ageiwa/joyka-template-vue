@@ -19,6 +19,10 @@
             align-items: center;
         }
 
+        .item-step__text {
+            padding: 0;
+        }
+
         .item-step__step {
             display: none;
         }
@@ -57,10 +61,6 @@
     
         .love-img {
             display: none;
-        }
-
-        .item-step__text {
-            padding: 0;
         }
     }
 }
