@@ -1,6 +1,7 @@
 <script setup>
     import SendJoykaBtn from '@/components/SendJoykaBtn/SendJoykaBtn.vue'
     import './style.scss'
+    import './media.scss'
 </script>
 
 <template>
@@ -8,6 +9,7 @@
         
         <div class="container">
             <h1 class="preview__title">JoyKa — эмоции в конверте Дари моменты радости вместе с JoyMail!</h1>
+            <h1 class="mobile-title">Удивляй! Вдохновляй! Дари тепло близким вместе с JoyKa</h1>
             
             <ul class="preview__list-preview">
                 <li class="list-preview__item-preview">
@@ -59,7 +61,7 @@
                     
                     <div class="btn-play-container__text">
                         <p>Посмотрите видеообзор нашего подарка</p>
-                        <span>Время просмотра 1:23 сек</span>
+                        <p>Время просмотра 1:23 сек</p>
                     </div>
                 </div>
 

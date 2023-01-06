@@ -1,6 +1,7 @@
 <script setup>
   import SelectLanguage from '@/components/SelectLanguage/SelectLanguage.vue'
   import './style.scss'
+  import './media.scss'
 </script>
 
 <template>

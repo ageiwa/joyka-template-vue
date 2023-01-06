@@ -1,0 +1,47 @@
+@media (max-width: 760px) {
+    .preview  {
+        padding-bottom: 20px;
+        height: auto;
+        background-image:  url('@/assets/girl-preview.png'), url('@/assets/background.png');
+        background-size: auto 400px, cover;
+        background-position: 50% 70%, center center;
+        background-repeat: no-repeat, no-repeat;
+
+        .container {
+            padding-top: 16px;
+        }
+
+        &__title {
+            display: none;
+        }
+
+        .mobile-title {
+            display: block;
+        }
+
+        &__clouds {
+            z-index: -1;
+        }
+    }
+
+    .preview__list-preview {
+        width: 100%;
+    }
+
+    .list-preview__item-preview {
+        font-size: 20px;
+    }
+    
+    .preview__btns-preview {
+        margin-top: 300px;
+        display: block;
+    }
+
+    .send-joyka-btn {
+        margin: 0 auto;
+    }
+
+    .btn-play-container {
+        margin: 20px auto;
+    }
+}

@@ -10,10 +10,10 @@
 <template>
   <Header />
   <Preview />
-  <HowItWorks />
-  <ReasonForSend />
-  <Form />
-  <Footer />
+  <!-- <HowItWorks /> -->
+  <!-- <ReasonForSend /> -->
+  <!-- <Form /> -->
+  <!-- <Footer /> -->
 </template>
 
 <style scoped>

@@ -4,6 +4,12 @@
     width: 100%;
     background-color: #fff;
 
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
     &__logo {
         height: 48px;
     }
@@ -30,13 +36,4 @@
 
 .navbar__item:last-child {
     margin-right: 0;
-}
-
-.header .container {
-    margin: 0 auto;
-    width: 1219px;
-    height: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
 }
