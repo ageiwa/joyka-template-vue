@@ -1,5 +1,5 @@
 .how-it-works {
-    height: 100%;
+    width: 100%;
     height: 1206px;
     background-color: #fff;
 
@@ -93,7 +93,6 @@
 .step-address {
     margin-top: 169px;
     width: 100%;
-    height: 280px;
     grid-column: 1 / 4;
     display: flex;
 
@@ -131,7 +130,6 @@
 
     & .item-step__subtitle {
         margin-bottom: 44px;
-        width: 381px;
     }
 
     & .item-step__step {

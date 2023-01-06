@@ -1,9 +1,14 @@
 @media (max-width: 1219px) {
     .how-it-works {
-        height: auto;
+        height: 100%;
+
+        &__header-title {
+            font-size: 30px;
+        }
     }
 
     .how-it-works__step-list {
+        margin-top: 78px;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -31,23 +36,31 @@
         }
     }
 
+    .third-step {
+        margin-top: 50px;
+    }
+
     .step-address {
         margin: 0;
         grid-column: auto;
     
         .item-step__wrap-img {
             flex: auto;
-            flex-shrink: 0;
             width: 320px;
             height: 280px;
         }
     
-        .item-step__img {
+        .item-step__img:last-child {
+            right: -35px;
             position: absolute;
         }
     
         .love-img {
             display: none;
+        }
+
+        .item-step__text {
+            padding: 0;
         }
     }
 }

@@ -46,7 +46,7 @@
                     </div>
                 </li>
 
-                <li class="step-list__item-step">
+                <li class="step-list__item-step third-step">
                     <div class="item-step__wrap-img">
                         <img class="item-step__img" src="@/assets/man-chocolate.png">
                     </div>
