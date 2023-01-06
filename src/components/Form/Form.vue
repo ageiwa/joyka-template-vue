@@ -119,7 +119,6 @@
                             <svg class="progress-line-mobile" id="svg" width="90" height="90" viewPort="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg">
                                 <circle cx="45" cy="45" r="45" :style="{strokeDashoffset: progressLineMobile, strokeWidth: 20, strokeDasharray: 283}" transform-origin="center" transform="rotate(-90)" fill="rgba(0,0,0,0)" stroke="#2783FE"></circle>
                             </svg>
-                            <!-- <div class="progress-line-mobile"></div> -->
                             <div class="progress-mobile__title">
                                 {{ currentStep }} из {{ totalStep }}
                             </div>
