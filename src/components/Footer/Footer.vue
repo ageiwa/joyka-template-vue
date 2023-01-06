@@ -1,3 +1,7 @@
+<script setup>
+    import './style.scss'
+</script>
+
 <template>
     <footer class="footer">
         <div class="container">
@@ -62,7 +66,3 @@
         </div>
     </footer>
 </template>
-
-<style scoped lang="scss">
-    @import './style.scss'
-</style>

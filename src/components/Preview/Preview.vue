@@ -1,5 +1,6 @@
 <script setup>
     import SendJoykaBtn from '@/components/SendJoykaBtn/SendJoykaBtn.vue'
+    import './style.scss'
 </script>
 
 <template>
@@ -69,7 +70,3 @@
         <div class="preview__clouds"></div>
     </div>
 </template>
-
-<style scoped lang="scss">
-    @import './style.scss'
-</style>

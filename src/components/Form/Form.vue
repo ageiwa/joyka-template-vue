@@ -1,6 +1,7 @@
 <script setup>
     import { ref } from 'vue'
     import SendJoykaBtn from '@/components/SendJoykaBtn/SendJoykaBtn.vue'
+    import './style.scss'
 
     const data = ref([
         {
@@ -118,7 +119,3 @@
         </div>
     </div>
 </template>
-
-<style scoped lang="scss">
-    @import './style.scss'
-</style>

@@ -3,6 +3,7 @@
     import { Swiper, SwiperSlide } from 'swiper/vue'
     import { Navigation, Pagination } from 'swiper'
     import 'swiper/scss'
+    import './style.scss'
 
     const slides = ref([
         {img: 'src/assets/slider-img1.png', title: 'Удивить родных', subtitle: 'Встретились со знаменитостью? Веселитесь на концерте любимой группы? Отдыхаете на экзотическом пляже? Такие фото обязательно должны быть в семейном альбоме!'},
@@ -79,7 +80,3 @@
         <div class="reason-for-send__wave"></div>
     </div>
 </template>
-
-<style scoped lang="scss">
-    @import './style.scss'
-</style>

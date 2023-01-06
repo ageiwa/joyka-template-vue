@@ -1,4 +1,5 @@
 <script setup>
+    import './style.scss'
     const props = defineProps({
         title: String,
         showIcon: Boolean
@@ -13,7 +14,3 @@
         </span>
     </button>
 </template>
-
-<style scoped lang="scss">
-    @import './style.scss'
-</style>

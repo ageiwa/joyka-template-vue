@@ -1,0 +1,31 @@
+// @media (max-width: 575.98px) {
+
+// }
+
+// @media (max-width: 767.98px) {
+
+// }
+
+// @media (max-width: 991.98px) {
+
+// }
+
+// @media (max-width: 1199.98px) {
+
+// }
+
+// @media (max-width: 1399.98px) {
+
+// }
+
+@media (max-width: 1219px) {
+    .container {
+        width: 100%;
+        padding: 0 20px;
+    }
+
+    .how-it-works__step-list {
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(4, 1fr);
+    }
+}

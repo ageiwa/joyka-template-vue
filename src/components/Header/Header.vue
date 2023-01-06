@@ -1,5 +1,6 @@
 <script setup>
   import SelectLanguage from '@/components/SelectLanguage/SelectLanguage.vue'
+  import './style.scss'
 </script>
 
 <template>
@@ -27,7 +28,3 @@
     </div>
   </header>
 </template>
-
-<style scoped lang="scss">
-  @import './style.scss'
-</style>

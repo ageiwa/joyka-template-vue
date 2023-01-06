@@ -1,5 +1,6 @@
 <script setup>
-    import { ref } from 'vue';
+    import { ref } from 'vue'
+    import './style.scss'
 
     const lang = ref('EN')
     const langIcon = ref('/src/assets/us.png')
@@ -33,7 +34,3 @@
 
     </div>
 </template>
-
-<style scoped lang="scss">
-  @import './style.scss'
-</style>
