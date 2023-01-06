@@ -9,40 +9,40 @@
             step: 1,
             title: 'Выберите страну отправления',
             data: [
-                {id: 'country1', name: 'Украина', img: '/src/assets/country1.png'},
-                {id: 'country2', name: 'Грузия', img: '/src/assets/country2.png'},
-                {id: 'country3', name: 'Тайланд', img: '/src/assets/country3.png'},
-                {id: 'other-country', name: 'Еще страна', img: '/src/assets/other.png'}
+                {id: 'country1', name: 'Украина', img: '/src/assets/country1.png', checked: false},
+                {id: 'country2', name: 'Грузия', img: '/src/assets/country2.png', checked: false},
+                {id: 'country3', name: 'Тайланд', img: '/src/assets/country3.png', checked: false},
+                {id: 'other-country', name: 'Еще страна', img: '/src/assets/other.png', checked: false}
             ]
         },
         {
             step: 2,
             title: 'Выберите время отправления',
             data: [
-                {id: 'time1', name: 'Утром', img: '/src/assets/time1.png'},
-                {id: 'time2', name: 'Днем', img: '/src/assets/time2.png'},
-                {id: 'time3', name: 'Вечером', img: '/src/assets/time3.png'},
-                {id: 'other-time', name: 'Другое время', img: '/src/assets/other.png'}
+                {id: 'time1', name: 'Утром', img: '/src/assets/time1.png', checked: false},
+                {id: 'time2', name: 'Днем', img: '/src/assets/time2.png', checked: false},
+                {id: 'time3', name: 'Вечером', img: '/src/assets/time3.png', checked: false},
+                {id: 'other-time', name: 'Другое время', img: '/src/assets/other.png', checked: false}
             ]
         },
         {
             step: 3,
             title: 'Выберите социальную сеть для доставки',
             data: [
-                {id: 'soc1', name: 'VK', img: '/src/assets/soc1.png'},
-                {id: 'soc2', name: 'Одноклассники', img: '/src/assets/soc2.png'},
-                {id: 'soc3', name: 'E-Mail', img: '/src/assets/soc3.png'},
-                {id: 'other-soc', name: 'Другой способ', img: '/src/assets/other.png'}
+                {id: 'soc1', name: 'VK', img: '/src/assets/soc1.png', checked: false},
+                {id: 'soc2', name: 'Одноклассники', img: '/src/assets/soc2.png', checked: false},
+                {id: 'soc3', name: 'E-Mail', img: '/src/assets/soc3.png', checked: false},
+                {id: 'other-soc', name: 'Другой способ', img: '/src/assets/other.png', checked: false}
             ]
         },
         {
             step: 4,
             title: 'Выберите голос озвучивания Joyka',
             data: [
-                {id: 'voice1', name: 'Виктор', img: '/src/assets/voice1.png'},
-                {id: 'voice2', name: 'Елена', img: '/src/assets/voice2.png'},
-                {id: 'voice3', name: 'Максим', img: '/src/assets/voice3.png'},
-                {id: 'other-voice', name: 'Выбрать свой', img: '/src/assets/other.png'}
+                {id: 'voice1', name: 'Виктор', img: '/src/assets/voice1.png', checked: false},
+                {id: 'voice2', name: 'Елена', img: '/src/assets/voice2.png', checked: false},
+                {id: 'voice3', name: 'Максим', img: '/src/assets/voice3.png', checked: false},
+                {id: 'other-voice', name: 'Выбрать свой', img: '/src/assets/other.png', checked: false}
             ]
         },
     ])
@@ -79,6 +79,20 @@
         progressLineMobile.value = pct
 
         return progressPrecent
+    }
+
+    function handleCheck(e) {
+        data.value.forEach(item => {
+            if (item.step === currentStep.value) {
+                item.data.forEach(value => {
+                    if (value.checked && value.id !== e.target.id) value.checked = false
+                })
+
+                const obj = item.data.find(input => input.id === e.target.id)
+                obj.checked = !obj.checked
+                
+            }
+        })
     }
 
 </script>
@@ -122,7 +136,7 @@
                                 </div>
                                 {{ data.name }}
                             </label>
-                            <input class="country__input" :id="data.id" type="radio" name="country">
+                            <input @click="handleCheck" class="country__input" :id="data.id" type="radio" name="country" :checked="data.checked">
                         </div>
                     </div>
 
