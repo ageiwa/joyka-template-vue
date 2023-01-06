@@ -1,19 +1,23 @@
 @media (max-width: 1219px) {
     .order-form {
+        height: auto;
         background-color: #fff;
+
         .container {
             padding: 20px;
         }
+
+        .form {
+            height: auto;
+        }
     }
 
-    .form {
-        .form__img-wrap {
-            display: none;
-        }
+    .form__img-wrap {
+        display: none;
+    }
 
-        .form__choice {
-            padding: 0;
-        }
+    .form__choice {
+        padding: 0;
     }
 
     .form::before {
