@@ -26,6 +26,7 @@
         .choice__header {
             display: flex;
             justify-content: center;
+            align-items: center;
         }
 
         .choice__progress {
@@ -39,7 +40,6 @@
         .select-country__title {
             margin: 0;
             margin-left: 20px;
-            width: 189px;
             font-size: 22px;
         }
 

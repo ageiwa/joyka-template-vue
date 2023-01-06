@@ -77,6 +77,7 @@
         position: relative;
         overflow: hidden;
         display: none;
+        flex-shrink: 0;
     }
 
     .progress-line-mobile {
