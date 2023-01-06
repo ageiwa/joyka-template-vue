@@ -11,7 +11,7 @@
   <Header />
   <Preview />
   <HowItWorks />
-  <!-- <ReasonForSend /> -->
+  <ReasonForSend />
   <!-- <Form /> -->
   <!-- <Footer /> -->
 </template>
