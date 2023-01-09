@@ -65,9 +65,18 @@
     }
 
     function nextStep() {
-        if (currentStep.value === totalStep.value) submitStep.value = true
-        if (currentStep.value < totalStep.value) currentStep.value++
+
+        data.value.forEach(item => {
+            if (item.step === currentStep.value) {
+                const inputsCheck = item.data.filter(input => input.checked)
+                
+                if (inputsCheck.length !== 0 && currentStep.value === totalStep.value) submitStep.value = true
+                if (inputsCheck.length !== 0 && currentStep.value < totalStep.value) currentStep.value++
+            }
+        })
+
         if (currentStep.value === totalStep.value) btnNextTitle.value = 'Отправить Джойку'
+
         progressLine.value = calcProgress()
     }
 
@@ -93,8 +102,8 @@
                     if (value.checked && value.id !== e.target.id) value.checked = false
                 })
 
-                const obj = item.data.find(input => input.id === e.target.id)
-                obj.checked = !obj.checked
+                const input = item.data.find(input => input.id === e.target.id)
+                input.checked = !input.checked
                 
             }
         })
