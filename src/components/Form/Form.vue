@@ -52,6 +52,9 @@
 
     const currentStep = ref(1)
     const totalStep = ref(4)
+    const submitStep = ref(false)
+
+    const btnNextTitle = ref('Следующий шаг')
 
     const progressLineMobile = ref(0)
     const progressLine = ref(calcProgress())
@@ -62,7 +65,9 @@
     }
 
     function nextStep() {
+        if (currentStep.value === totalStep.value) submitStep.value = true
         if (currentStep.value < totalStep.value) currentStep.value++
+        if (currentStep.value === totalStep.value) btnNextTitle.value = 'Отправить Джойку'
         progressLine.value = calcProgress()
     }
 
@@ -107,7 +112,7 @@
                 </div>
                 <div class="form__choice">
 
-                    <div class="choice__header">
+                    <div v-if="!submitStep" class="choice__header">
                         <div class="choice__progress">
                             <p class="progress__step">Шаг {{ currentStep }} из {{ totalStep }}</p>
                             <div class="progress__progress-wrap">
@@ -127,7 +132,7 @@
                         <h2 class="select-country__title">{{ stepTitle }}</h2>
                     </div>
 
-                    <div class="select-country__county-wrap">
+                    <div v-if="!submitStep" class="select-country__county-wrap">
                         <div v-for="data in stepData" class="country-wrap__country">
                             <label :for="data.id" class="country__label">
                                 <div class="label__img-wrap">
@@ -139,9 +144,15 @@
                         </div>
                     </div>
 
-                    <div class="choice__btns-wrap">
+                    <div v-if="submitStep" class="choice__submit">
+                        <h2 class="submit__title">
+                            Поздравляем! Joyka будет доставлена в течении 10 минут
+                        </h2>
+                    </div>
+
+                    <div v-if="!submitStep" class="choice__btns-wrap">
                         <SendJoykaBtn :title="'Предыдущий шаг'" @click="prevStep" />
-                        <SendJoykaBtn :title="'Следующий шаг'" @click="nextStep" />
+                        <SendJoykaBtn :title="btnNextTitle" @click="nextStep" />
                     </div>
                 </div>
             </form>
