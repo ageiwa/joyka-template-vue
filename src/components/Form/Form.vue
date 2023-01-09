@@ -61,21 +61,25 @@
 
     function prevStep() {
         if (currentStep.value > 1) currentStep.value--
+
+        if (currentStep.value < totalStep.value) btnNextTitle.value = 'Следующий шаг'
         progressLine.value = calcProgress()
     }
 
     function nextStep() {
+        let inputsCheck = null
 
         data.value.forEach(item => {
             if (item.step === currentStep.value) {
-                const inputsCheck = item.data.filter(input => input.checked)
-                
-                if (inputsCheck.length !== 0 && currentStep.value === totalStep.value) submitStep.value = true
-                if (inputsCheck.length !== 0 && currentStep.value < totalStep.value) currentStep.value++
+                inputsCheck = item.data.filter(input => input.checked)
             }
         })
 
+        if (inputsCheck.length !== 0 && currentStep.value === totalStep.value) submitStep.value = true
+        if (inputsCheck.length !== 0 && currentStep.value < totalStep.value) currentStep.value++
+
         if (currentStep.value === totalStep.value) btnNextTitle.value = 'Отправить Джойку'
+        
 
         progressLine.value = calcProgress()
     }
